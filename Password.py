@@ -13,9 +13,10 @@ while a != p:
     if c == 1:
         print("Password incorrect, you still have", c, "chance left")
     if c == 0:
-        print(
-            "Account locked due to mutiple unsucessful attempt, please contect support for more infomation."
-        )
-        break
+        if a != p:
+            print(
+                "Account locked due to mutiple unsucessful attempt, please contect support for more infomation."
+            )
+            break
 if a == p:
     print("Login sucessful!")
